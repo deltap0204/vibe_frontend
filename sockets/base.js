@@ -16,6 +16,6 @@ module.exports = {
     emit: function (name = 'news', data = {
             hello: 'world'
         }) {
-        ioSocket.emit(name, data);
+        ioVar.emit(name, data);
     }
 } 

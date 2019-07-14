@@ -30,11 +30,11 @@ router.put('/update/:_id', function (req, res, next) {
         };
     }
 
-    models.Rooms.findOneAndUpdate({
+    models.Rooms.findByIdAndUpdate({
         _id: req.params._id
     }, {
         $inc: query
-    }).exec(function (e, result) {
+    }, {new:true}).exec(function (e, result) {
         if (e) {
             res.status(500).send(e);
             console.log(e.message);
