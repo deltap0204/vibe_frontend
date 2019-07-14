@@ -12,6 +12,10 @@ export class RoomService {
   getRoom<T>(_id): Observable<T> {
     return this.http.get<T>('http://localhost:3000/api/rooms/'+_id);
   }
+
+  enterRoom<T>(_id): Observable<T> {
+    return this.http.put<T>('http://localhost:3000/api/rooms/enter/'+_id,{});
+  }
   
   updateVibe<T>(vibe): Observable<T> {
     var body = {

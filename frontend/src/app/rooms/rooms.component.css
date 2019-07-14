@@ -25,3 +25,8 @@
   height: 60px;
   line-height: 95px;
 }
+
+.animate_image:hover {
+  cursor: pointer;
+  width: 60px;
+}

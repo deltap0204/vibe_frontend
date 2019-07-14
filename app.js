@@ -11,6 +11,7 @@ const models = require('./models/model');
 // var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
 var vibesRouter = require('./routes/vibes');
+var roomsRouter = require('./routes/rooms');
 
 var app = express();
 
@@ -36,6 +37,7 @@ app.use(cors())
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 app.use('/api/vibes', vibesRouter);
+app.use('/api/rooms', roomsRouter);
 app.use('/api/rooms', require('./models/crud')(models.Rooms));
 app.use('/api/vibes', require('./models/crud')(models.Vibes));
 

@@ -11,7 +11,19 @@ import { Socket } from 'ngx-socket-io';
 export class RoomsComponent implements OnInit {
 
   title = 'vote-demo';
-  room = {};
+  room:any = {
+    "title": "",
+    "season": 0,
+    "episode": 0,
+    "vibers": 0,
+    "vibes": {
+      "haha": 0,
+      "smile": 0,
+      "wow": 0,
+      "sad": 0,
+      "angry": 0
+    }
+  };
 
   constructor(private roomService: RoomService, private socket: Socket) { }
   
@@ -21,6 +33,15 @@ export class RoomsComponent implements OnInit {
       .on("rooms", function (data) {
         that.room = data;
         console.log(data);
+      });
+
+    this.roomService.enterRoom('5d2add3684899d2b0c10f158')
+      .subscribe((success) => {
+        // console.log(success);
+
+        this.room = success;
+      }, (error) => {
+        console.log(error);
       });
 
     this.roomService.getRoom('5d2add3684899d2b0c10f158')
