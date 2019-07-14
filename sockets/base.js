@@ -1,10 +1,21 @@
-module.exports = function (io) {
-    io.on('connection', function (socket) {
-        socket.emit('news', {
+var ioSocket;
+var ioVar;
+module.exports = {
+    initialize: function(io) {
+        ioVar = io;
+        io.on('connection', function (socket) {
+            ioSocket = socket;
+            // ioSocket.emit('news', {
+            //     hello: 'world'
+            // });
+            // ioSocket.on('my other event', function (data) {
+            //     console.log(data);
+            // });
+        });
+    },
+    emit: function (name = 'news', data = {
             hello: 'world'
-        });
-        socket.on('my other event', function (data) {
-            console.log(data);
-        });
-    });
-}
+        }) {
+        ioSocket.emit(name, data);
+    }
+} 

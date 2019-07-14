@@ -1,4 +1,5 @@
 const express = require('express');
+const io = require('../sockets/base');
 
 module.exports = (Collection) => {
 
@@ -28,6 +29,7 @@ module.exports = (Collection) => {
                 res.status(500).send(e);
                 console.log(e.message);
             } else {
+                io.emit();
                 res.send(result);
             }
         });
@@ -46,6 +48,7 @@ module.exports = (Collection) => {
                 res.status(500).send(e);
                 console.log(e.message);
             } else {
+                io.emit();
                 res.send(result);
             }
         });
@@ -66,6 +69,7 @@ module.exports = (Collection) => {
             else
                 res.sendStatus(200);
         });
+
     };
 
     // ======

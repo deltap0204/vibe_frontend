@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+var cors = require('cors')
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -9,6 +10,7 @@ const models = require('./models/model');
 
 // var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
+var vibesRouter = require('./routes/vibes');
 
 var app = express();
 
@@ -29,9 +31,13 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
+app.use(cors())
+
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
+app.use('/api/vibes', vibesRouter);
 app.use('/api/rooms', require('./models/crud')(models.Rooms));
+app.use('/api/vibes', require('./models/crud')(models.Vibes));
 
 // For all GET requests, send back index.html
 // so that PathLocationStrategy can be used
