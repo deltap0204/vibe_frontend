@@ -151,7 +151,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var config = { url: 'https://vibe-demo.herokuapp.com:3000', options: {} };
+var config = { url: 'https://vibe-demo.herokuapp.com', options: {} };
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
