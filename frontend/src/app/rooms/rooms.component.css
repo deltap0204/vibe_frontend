@@ -30,3 +30,23 @@
   cursor: pointer;
   width: 60px;
 }
+
+.laugh_bg {
+  background-color: #F7CE7B;
+}
+
+.smile_bg {
+  background-color: #88C09B;
+}
+
+.wow_bg {
+  background-color: #BA6D97;
+}
+
+.sad_bg {
+  background-color: #69D5FF;
+}
+
+.angry_bg {
+  background-color: #D65864;
+}

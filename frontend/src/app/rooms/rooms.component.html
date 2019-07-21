@@ -17,7 +17,8 @@
     </div>
     <div style="height: 50px"> </div>
     <div class="card-body">
-      <div class="text-center vibers-count">
+      <div class="text-center vibers-count"
+        [ngClass]="{'laugh_bg': vibe === 'laugh', 'smile_bg': vibe === 'smile', 'wow_bg': vibe === 'wow', 'sad_bg': vibe  === 'sad', 'angry_bg': vibe  === 'angry'}">
         <div class="counter">
           <b>{{room.vibers}}</b>
         </div>

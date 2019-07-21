@@ -24,6 +24,7 @@ export class RoomsComponent implements OnInit {
       "angry": 0
     }
   };
+  vibe:any = '';
 
   constructor(private roomService: RoomService, private socket: Socket) { }
   
@@ -55,6 +56,11 @@ export class RoomsComponent implements OnInit {
   }
 
   onSelect(vibe): void {
+    this.vibe = vibe;
+    
+    setTimeout(() => {
+      this.vibe = '';
+    }, 1000)
     this.roomService.updateVibe(vibe)
       .subscribe((success) => {
         // console.log(success);
