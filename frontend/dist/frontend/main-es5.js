@@ -255,7 +255,8 @@ var RoomsComponent = /** @class */ (function () {
     RoomsComponent.prototype.onSelect = function (vibe) {
         var _this = this;
         this.vibe = vibe;
-        setTimeout(function () {
+        clearTimeout(this.myVar);
+        this.myVar = setTimeout(function () {
             _this.vibe = '';
         }, 1000);
         this.roomService.updateVibe(vibe)

@@ -246,7 +246,8 @@ let RoomsComponent = class RoomsComponent {
     }
     onSelect(vibe) {
         this.vibe = vibe;
-        setTimeout(() => {
+        clearTimeout(this.myVar);
+        this.myVar = setTimeout(() => {
             this.vibe = '';
         }, 1000);
         this.roomService.updateVibe(vibe)

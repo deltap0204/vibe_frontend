@@ -25,6 +25,7 @@ export class RoomsComponent implements OnInit {
     }
   };
   vibe:any = '';
+  myVar:any;
 
   constructor(private roomService: RoomService, private socket: Socket) { }
   
@@ -57,8 +58,8 @@ export class RoomsComponent implements OnInit {
 
   onSelect(vibe): void {
     this.vibe = vibe;
-    
-    setTimeout(() => {
+    clearTimeout(this.myVar);
+    this.myVar = setTimeout(() => {
       this.vibe = '';
     }, 1000)
     this.roomService.updateVibe(vibe)
