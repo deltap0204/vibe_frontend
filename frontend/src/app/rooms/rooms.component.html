@@ -28,6 +28,28 @@
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="b1">
+        <div class="box" [ngClass]="{'box1': vibe === 'laugh', 'box2': vibe !== 'laugh'}"></div>
+        <div class="box box1"></div>
+      </div>
+      <div class="b2">
+        <div class="box" [ngClass]="{'box1': vibe === 'smile', 'box2': vibe !== 'smile'}"></div>
+        <div class="box box1"></div>
+      </div>
+      <div class="b3">
+        <div class="box" [ngClass]="{'box1': vibe === 'wow', 'box2': vibe !== 'wow'}"></div>
+        <div class="box box1"></div>
+      </div>
+      <div class="b4">
+        <div class="box" [ngClass]="{'box1': vibe === 'sad', 'box2': vibe !== 'sad'}"></div>
+        <div class="box box1"></div>
+      </div>
+      <div class="b5">
+        <div class="box" [ngClass]="{'box1': vibe === 'angry', 'box2': vibe !== 'angry'}"></div>
+        <div class="box box1"></div>
+      </div>
+    </div>
     <div class="card-footer fixed-bottom text-center">
       <div class="row">
         <div class="col images-col">
@@ -65,5 +87,7 @@
         </div>
       </div>
     </div>
+    
+   
   </div>
 </div>
