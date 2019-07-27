@@ -39,7 +39,7 @@ export class RoomsComponent implements OnInit {
 
     this.socket
       .on("vibe", function (vibe) {
-        console.log("vibbbbb");
+        console.log(vibe);
         
         this.vibe = vibe;
         clearTimeout(this.myVar);
