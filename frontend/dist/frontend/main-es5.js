@@ -237,6 +237,15 @@ var RoomsComponent = /** @class */ (function () {
             that.room = data;
             console.log(data);
         });
+        this.socket
+            .on("vibe", function (data) {
+            console.log(data);
+            that.vibe = data.vibe;
+            clearTimeout(that.myVar);
+            that.myVar = setTimeout(function () {
+                that.vibe = '';
+            }, 1000);
+        });
         this.roomService.enterRoom('5d2add3684899d2b0c10f158')
             .subscribe(function (success) {
             // console.log(success);
@@ -253,12 +262,6 @@ var RoomsComponent = /** @class */ (function () {
         });
     };
     RoomsComponent.prototype.onSelect = function (vibe) {
-        var _this = this;
-        this.vibe = vibe;
-        clearTimeout(this.myVar);
-        this.myVar = setTimeout(function () {
-            _this.vibe = '';
-        }, 1000);
         this.roomService.updateVibe(vibe)
             .subscribe(function (success) {
             // console.log(success);
