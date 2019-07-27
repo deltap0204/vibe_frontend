@@ -6,6 +6,7 @@ const io = require('../sockets/base');
 /* GET users listing. */
 router.put('/update/:_id', function (req, res, next) {
     const changedEntry = req.body.vibe;
+    io.emit('vibe', changedEntry);
     
     var query = {};
     if (changedEntry == 'laugh') {

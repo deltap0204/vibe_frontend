@@ -37,6 +37,17 @@ export class RoomsComponent implements OnInit {
         console.log(data);
       });
 
+    this.socket
+      .on("vibe", function (vibe) {
+        console.log("vibbbbb");
+        
+        this.vibe = vibe;
+        clearTimeout(this.myVar);
+        this.myVar = setTimeout(() => {
+          this.vibe = '';
+        }, 1000)
+      });
+
     this.roomService.enterRoom('5d2add3684899d2b0c10f158')
       .subscribe((success) => {
         // console.log(success);
@@ -57,11 +68,7 @@ export class RoomsComponent implements OnInit {
   }
 
   onSelect(vibe): void {
-    this.vibe = vibe;
-    clearTimeout(this.myVar);
-    this.myVar = setTimeout(() => {
-      this.vibe = '';
-    }, 1000)
+    
     this.roomService.updateVibe(vibe)
       .subscribe((success) => {
         // console.log(success);
