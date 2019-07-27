@@ -38,13 +38,13 @@ export class RoomsComponent implements OnInit {
       });
 
     this.socket
-      .on("vibe", function (vibe) {
-        console.log(vibe);
+      .on("vibe", function (data) {
+        console.log(data);
         
-        this.vibe = vibe;
-        clearTimeout(this.myVar);
-        this.myVar = setTimeout(() => {
-          this.vibe = '';
+        that.vibe = data.vibe;
+        clearTimeout(that.myVar);
+        that.myVar = setTimeout(() => {
+          that.vibe = '';
         }, 1000)
       });
 
