@@ -32,23 +32,28 @@
 }
 
 .laugh_bg {
-  background-color: #F7CE7B;
+  /*background-color: #F7CE7B;*/
+  background-color: #F7F7F7;
 }
 
 .smile_bg {
-  background-color: #88C09B;
+  /*background-color: #88C09B;*/
+  background-color: #F7F7F7;
 }
 
 .wow_bg {
-  background-color: #BA6D97;
+  /*background-color: #BA6D97;*/
+  background-color: #F7F7F7;
 }
 
 .sad_bg {
-  background-color: #69D5FF;
+  /*background-color: #69D5FF;*/
+  background-color: #F7F7F7;
 }
 
 .angry_bg {
-  background-color: #D65864;
+  /*background-color: #D65864;*/
+  background-color: #F7F7F7;
 }
 .container2-rk{
   position: relative;
