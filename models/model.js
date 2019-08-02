@@ -10,7 +10,7 @@ const Schema = mongoose.Schema;
 // mongoose.connect('mongodb+srv://rk_vibe:rkvibe123@cluster0-yoxmj.mongodb.net/test?retryWrites=true&w=majority', {
 //     useNewUrlParser: true
 // });
-mongoose.connect('mongodb+srv://rk_vibe:rkvibe123@cluster0-yoxmj.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect('mongodb://viberuser:viberpass123@ds249967.mlab.com:49967/viberdb', {
     useNewUrlParser: true
 });
 // =======
