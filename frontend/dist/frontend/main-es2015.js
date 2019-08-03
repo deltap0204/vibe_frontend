@@ -231,7 +231,8 @@ let RoomsComponent = class RoomsComponent {
         });
         this.socket
             .on("vibe", function (data) {
-            console.log(data);
+            // console.log(data);
+            that.playAudio();
             that.vibe = data.vibe;
             clearTimeout(that.myVar);
             that.myVar = setTimeout(() => {
@@ -261,6 +262,12 @@ let RoomsComponent = class RoomsComponent {
         }, (error) => {
             console.log(error);
         });
+    }
+    playAudio() {
+        let audio = new Audio();
+        audio.src = "../../../assets/aqua4.mp3";
+        audio.load();
+        audio.play();
     }
 };
 RoomsComponent.ctorParameters = () => [

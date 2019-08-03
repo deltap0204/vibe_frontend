@@ -39,8 +39,8 @@ export class RoomsComponent implements OnInit {
 
     this.socket
       .on("vibe", function (data) {
-        console.log(data);
-        
+        // console.log(data);
+        that.playAudio();        
         that.vibe = data.vibe;
         clearTimeout(that.myVar);
         that.myVar = setTimeout(() => {
@@ -76,6 +76,13 @@ export class RoomsComponent implements OnInit {
       }, (error) => {
         console.log(error);
       });
+  }
+
+  playAudio() {
+    let audio = new Audio();
+    audio.src = "../../../assets/aqua4.mp3";
+    audio.load();
+    audio.play();
   }
 
 }

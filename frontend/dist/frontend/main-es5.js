@@ -239,7 +239,8 @@ var RoomsComponent = /** @class */ (function () {
         });
         this.socket
             .on("vibe", function (data) {
-            console.log(data);
+            // console.log(data);
+            that.playAudio();
             that.vibe = data.vibe;
             clearTimeout(that.myVar);
             that.myVar = setTimeout(function () {
@@ -269,6 +270,12 @@ var RoomsComponent = /** @class */ (function () {
         }, function (error) {
             console.log(error);
         });
+    };
+    RoomsComponent.prototype.playAudio = function () {
+        var audio = new Audio();
+        audio.src = "../../../assets/aqua4.mp3";
+        audio.load();
+        audio.play();
     };
     RoomsComponent.ctorParameters = function () { return [
         { type: _services_room_service__WEBPACK_IMPORTED_MODULE_2__["RoomService"] },
