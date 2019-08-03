@@ -275,7 +275,11 @@ let RoomsComponent = class RoomsComponent {
         let audio = new Audio();
         audio.src = "../../../assets/aqua4.mp3";
         audio.load();
-        audio.play();
+        audio.play().then(res => {
+            console.log(res);
+        }).catch(error => {
+            console.log(error);
+        });
     }
 };
 RoomsComponent.ctorParameters = () => [

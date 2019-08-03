@@ -283,7 +283,11 @@ var RoomsComponent = /** @class */ (function () {
         var audio = new Audio();
         audio.src = "../../../assets/aqua4.mp3";
         audio.load();
-        audio.play();
+        audio.play().then(function (res) {
+            console.log(res);
+        }).catch(function (error) {
+            console.log(error);
+        });
     };
     RoomsComponent.ctorParameters = function () { return [
         { type: _services_room_service__WEBPACK_IMPORTED_MODULE_2__["RoomService"] },
