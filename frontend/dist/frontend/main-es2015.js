@@ -147,7 +147,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const config = { url: 'https://vibe-demo.herokuapp.com', options: {} };
+const config = { url: 'https://vibe-demo.herokuapp.com', options: { 'sync disconnect on unload': true } };
 let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -221,13 +221,21 @@ let RoomsComponent = class RoomsComponent {
             }
         };
         this.vibe = '';
+        this.vibers = 0;
     }
     ngOnInit() {
         const that = this;
         this.socket
             .on("rooms", function (data) {
-            that.room = data;
-            console.log(data);
+            that.room.vibes = data.vibes;
+            // console.log(data);
+            // that.vibers = data.vibers;
+        });
+        this.socket
+            .on("vibers", function (data) {
+            that.vibers = data.vibers;
+            that.room.vibers = data.vibers;
+            // console.log(that.vibers);
         });
         this.socket
             .on("vibe", function (data) {
@@ -239,13 +247,13 @@ let RoomsComponent = class RoomsComponent {
                 that.vibe = '';
             }, 1000);
         });
-        this.roomService.enterRoom('5d2add3684899d2b0c10f158')
-            .subscribe((success) => {
-            // console.log(success);
-            this.room = success;
-        }, (error) => {
-            console.log(error);
-        });
+        // this.roomService.enterRoom('5d2add3684899d2b0c10f158')
+        //   .subscribe((success) => {
+        //     // console.log(success);
+        //     this.room = success;
+        //   }, (error) => {
+        //     console.log(error);
+        //   });
         this.roomService.getRoom('5d2add3684899d2b0c10f158')
             .subscribe((success) => {
             // console.log(success);

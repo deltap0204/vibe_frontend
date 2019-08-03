@@ -26,6 +26,7 @@ export class RoomsComponent implements OnInit {
   };
   vibe:any = '';
   myVar:any;
+  vibers:any = 0;
 
   constructor(private roomService: RoomService, private socket: Socket) { }
   
@@ -33,14 +34,23 @@ export class RoomsComponent implements OnInit {
     const that = this;
     this.socket
       .on("rooms", function (data) {
-        that.room = data;
-        console.log(data);
+        that.room.vibes = data.vibes;
+        // console.log(data);
+        // that.vibers = data.vibers;
+      });
+
+    this.socket
+      .on("vibers", function (data) {
+        that.vibers = data.vibers;
+        that.room.vibers = data.vibers;
+        // console.log(that.vibers);
       });
 
     this.socket
       .on("vibe", function (data) {
         // console.log(data);
-        that.playAudio();        
+        that.playAudio();
+
         that.vibe = data.vibe;
         clearTimeout(that.myVar);
         that.myVar = setTimeout(() => {
@@ -48,14 +58,14 @@ export class RoomsComponent implements OnInit {
         }, 1000)
       });
 
-    this.roomService.enterRoom('5d2add3684899d2b0c10f158')
-      .subscribe((success) => {
-        // console.log(success);
+    // this.roomService.enterRoom('5d2add3684899d2b0c10f158')
+    //   .subscribe((success) => {
+    //     // console.log(success);
 
-        this.room = success;
-      }, (error) => {
-        console.log(error);
-      });
+    //     this.room = success;
+    //   }, (error) => {
+    //     console.log(error);
+    //   });
 
     this.roomService.getRoom('5d2add3684899d2b0c10f158')
       .subscribe((success) => {
