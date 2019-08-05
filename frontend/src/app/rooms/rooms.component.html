@@ -43,25 +43,15 @@
 
   <div class="container2-rk">
     <div class="inner-td">
-      <div class="b1">
-        <div class="box" [ngClass]="{'box1': vibe === 'laugh', 'box2': vibe !== 'laugh'}"></div>
-        <div class="box box1"></div>
+      <div class="b1" #laughVibe>
       </div>
-      <div class="b2">
-        <div class="box" [ngClass]="{'box1': vibe === 'smile', 'box2': vibe !== 'smile'}"></div>
-        <div class="box box1"></div>
+      <div class="b2" #smileVibe>
       </div>
-      <div class="b3">
-        <div class="box" [ngClass]="{'box1': vibe === 'wow', 'box2': vibe !== 'wow'}"></div>
-        <div class="box box1"></div>
+      <div class="b3" #wowVibe>
       </div>
-      <div class="b4">
-        <div class="box" [ngClass]="{'box1': vibe === 'sad', 'box2': vibe !== 'sad'}"></div>
-        <div class="box box1"></div>
+      <div class="b4" #sadVibe>
       </div>
-      <div class="b5">
-        <div class="box" [ngClass]="{'box1': vibe === 'angry', 'box2': vibe !== 'angry'}"></div>
-        <div class="box box1"></div>
+      <div class="b5" #angryVibe>
       </div>
     </div>
   </div>

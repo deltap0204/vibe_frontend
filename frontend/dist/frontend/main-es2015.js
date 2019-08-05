@@ -41,7 +41,7 @@ module.exports = "<app-rooms></app-rooms>"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"\">\r\n  <!-- Sidebar -->\r\n  <nav id=\"sd-rk\" class=\"sidebar\">\r\n    <span id=\"removeclass\">×</span>\r\n    <ul>\r\n      <li>\r\n        <a href=\"#\">Main Screen</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"#\">Viber</a>\r\n      </li>\r\n    </ul>\r\n  </nav>\r\n\r\n  <div class=\"\">\r\n    <div class=\"card-header\">\r\n      <div class=\"row\">\r\n        <div class=\"col col-2\">\r\n          <img id=\"side_img\" class=\"float-left nav-img\" src=\"assets/images/ic_menu.png\" alt=\"\">\r\n        </div>\r\n        <div class=\"d-inline-block col col-8\">\r\n          <h5 class=\"card-title text-center\">{{room.title}}</h5>\r\n          <p class=\"card-text text-center\">Season {{room.season}}, Episode {{room.episode}}</p>\r\n        </div>\r\n        <div class=\"col col-2\">\r\n          <img class=\"float-right\" src=\"assets/images/ic_chat.png\" alt=\"\">\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div style=\"height: 50px\"> </div>\r\n    <div class=\"card-body\">\r\n      <div class=\"text-center vibers-count\"\r\n      [ngClass]=\"{'laugh_bg': vibe === 'laugh', 'smile_bg': vibe === 'smile', 'wow_bg': vibe === 'wow', 'sad_bg': vibe  === 'sad', 'angry_bg': vibe  === 'angry'}\">\r\n      <div class=\"counter\">\r\n        <b>{{room.vibers}}</b>\r\n      </div>\r\n      <hr>\r\n      <div>\r\n        <b>Vibers</b>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"container2-rk\">\r\n    <div class=\"inner-td\">\r\n      <div class=\"b1\">\r\n        <div class=\"box\" [ngClass]=\"{'box1': vibe === 'laugh', 'box2': vibe !== 'laugh'}\"></div>\r\n        <div class=\"box box1\"></div>\r\n      </div>\r\n      <div class=\"b2\">\r\n        <div class=\"box\" [ngClass]=\"{'box1': vibe === 'smile', 'box2': vibe !== 'smile'}\"></div>\r\n        <div class=\"box box1\"></div>\r\n      </div>\r\n      <div class=\"b3\">\r\n        <div class=\"box\" [ngClass]=\"{'box1': vibe === 'wow', 'box2': vibe !== 'wow'}\"></div>\r\n        <div class=\"box box1\"></div>\r\n      </div>\r\n      <div class=\"b4\">\r\n        <div class=\"box\" [ngClass]=\"{'box1': vibe === 'sad', 'box2': vibe !== 'sad'}\"></div>\r\n        <div class=\"box box1\"></div>\r\n      </div>\r\n      <div class=\"b5\">\r\n        <div class=\"box\" [ngClass]=\"{'box1': vibe === 'angry', 'box2': vibe !== 'angry'}\"></div>\r\n        <div class=\"box box1\"></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-footer text-center\">\r\n    <div class=\"row\">\r\n      <div class=\"col images-col\">\r\n        <span class=\"one-rk\">\r\n          <img  class=\"animate_image\" src=\"assets/images/imoji/btn_haha.png\" alt=\"\" width=\"50px\"\r\n          (click)=\"onSelect('laugh')\">\r\n          <span>\r\n            {{room.vibes.laugh}}\r\n          </span>\r\n        </span>\r\n        <span class=\"two-rk\">\r\n          <img class=\"animate_image\" src=\"assets/images/imoji/btn_smile.png\" alt=\"\" width=\"50px\" (click)=\"onSelect('smile')\">\r\n          <span>\r\n            {{room.vibes.smile}}\r\n          </span>\r\n        </span>\r\n        <span class=\"three-rk\">\r\n          <img class=\"animate_image\" src=\"assets/images/imoji/btn_wow.png\" alt=\"\" width=\"50px\" (click)=\"onSelect('wow')\">\r\n          <span>\r\n            {{room.vibes.wow}}\r\n          </span>\r\n        </span>\r\n        <span class=\"four-rk\">\r\n          <img class=\"animate_image\" src=\"assets/images/imoji/btn_sad.png\" alt=\"\" width=\"50px\" (click)=\"onSelect('sad')\">\r\n          <span>\r\n            {{room.vibes.sad}}\r\n          </span>\r\n        </span>\r\n        <span class=\"five-rk\">\r\n          <img class=\"animate_image\" src=\"assets/images/imoji/btn_angry.png\" alt=\"\" width=\"50px\" (click)=\"onSelect('angry')\">\r\n          <span>\r\n            {{room.vibes.angry}}\r\n          </span>\r\n        </span>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n\r\n</div>\r\n</div>\r\n\r\n\r\n"
+module.exports = "<div class=\"\">\r\n  <!-- Sidebar -->\r\n  <nav id=\"sd-rk\" class=\"sidebar\">\r\n    <span id=\"removeclass\">×</span>\r\n    <ul>\r\n      <li>\r\n        <a href=\"#\">Main Screen</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"#\">Viber</a>\r\n      </li>\r\n    </ul>\r\n  </nav>\r\n\r\n  <div class=\"\">\r\n    <div class=\"card-header\">\r\n      <div class=\"row\">\r\n        <div class=\"col col-2\">\r\n          <img id=\"side_img\" class=\"float-left nav-img\" src=\"assets/images/ic_menu.png\" alt=\"\">\r\n        </div>\r\n        <div class=\"d-inline-block col col-8\">\r\n          <h5 class=\"card-title text-center\">{{room.title}}</h5>\r\n          <p class=\"card-text text-center\">Season {{room.season}}, Episode {{room.episode}}</p>\r\n        </div>\r\n        <div class=\"col col-2\">\r\n          <img class=\"float-right\" src=\"assets/images/ic_chat.png\" alt=\"\">\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div style=\"height: 50px\"> </div>\r\n    <div class=\"card-body\">\r\n      <div class=\"text-center vibers-count\"\r\n      [ngClass]=\"{'laugh_bg': vibe === 'laugh', 'smile_bg': vibe === 'smile', 'wow_bg': vibe === 'wow', 'sad_bg': vibe  === 'sad', 'angry_bg': vibe  === 'angry'}\">\r\n      <div class=\"counter\">\r\n        <b>{{room.vibers}}</b>\r\n      </div>\r\n      <hr>\r\n      <div>\r\n        <b>Vibers</b>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"container2-rk\">\r\n    <div class=\"inner-td\">\r\n      <div class=\"b1\" #laughVibe>\r\n      </div>\r\n      <div class=\"b2\" #smileVibe>\r\n      </div>\r\n      <div class=\"b3\" #wowVibe>\r\n      </div>\r\n      <div class=\"b4\" #sadVibe>\r\n      </div>\r\n      <div class=\"b5\" #angryVibe>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-footer text-center\">\r\n    <div class=\"row\">\r\n      <div class=\"col images-col\">\r\n        <span class=\"one-rk\">\r\n          <img  class=\"animate_image\" src=\"assets/images/imoji/btn_haha.png\" alt=\"\" width=\"50px\"\r\n          (click)=\"onSelect('laugh')\">\r\n          <span>\r\n            {{room.vibes.laugh}}\r\n          </span>\r\n        </span>\r\n        <span class=\"two-rk\">\r\n          <img class=\"animate_image\" src=\"assets/images/imoji/btn_smile.png\" alt=\"\" width=\"50px\" (click)=\"onSelect('smile')\">\r\n          <span>\r\n            {{room.vibes.smile}}\r\n          </span>\r\n        </span>\r\n        <span class=\"three-rk\">\r\n          <img class=\"animate_image\" src=\"assets/images/imoji/btn_wow.png\" alt=\"\" width=\"50px\" (click)=\"onSelect('wow')\">\r\n          <span>\r\n            {{room.vibes.wow}}\r\n          </span>\r\n        </span>\r\n        <span class=\"four-rk\">\r\n          <img class=\"animate_image\" src=\"assets/images/imoji/btn_sad.png\" alt=\"\" width=\"50px\" (click)=\"onSelect('sad')\">\r\n          <span>\r\n            {{room.vibes.sad}}\r\n          </span>\r\n        </span>\r\n        <span class=\"five-rk\">\r\n          <img class=\"animate_image\" src=\"assets/images/imoji/btn_angry.png\" alt=\"\" width=\"50px\" (click)=\"onSelect('angry')\">\r\n          <span>\r\n            {{room.vibes.angry}}\r\n          </span>\r\n        </span>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n\r\n</div>\r\n</div>\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -203,9 +203,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let RoomsComponent = class RoomsComponent {
-    constructor(roomService, socket) {
+    constructor(roomService, socket, renderer) {
         this.roomService = roomService;
         this.socket = socket;
+        this.renderer = renderer;
         this.title = 'vote-demo';
         this.room = {
             "title": "",
@@ -245,6 +246,44 @@ let RoomsComponent = class RoomsComponent {
             that.myVar = setTimeout(() => {
                 that.vibe = '';
             }, 1000);
+            switch (data.vibe) {
+                case 'laugh':
+                    var ref = that.laughVibe.nativeElement;
+                    break;
+                case 'smile':
+                    var ref = that.smileVibe.nativeElement;
+                    break;
+                case 'wow':
+                    var ref = that.wowVibe.nativeElement;
+                    break;
+                case 'sad':
+                    var ref = that.sadVibe.nativeElement;
+                    break;
+                case 'angry':
+                    var ref = that.angryVibe.nativeElement;
+                    break;
+                default:
+                    break;
+            }
+            if (ref) {
+                const div1 = that.renderer.createElement('div');
+                that.renderer.addClass(div1, 'box');
+                that.renderer.addClass(div1, 'box2');
+                that.renderer.appendChild(ref, div1);
+                const div2 = that.renderer.createElement('div');
+                that.renderer.addClass(div2, 'box');
+                that.renderer.addClass(div2, 'box1');
+                that.renderer.appendChild(ref, div2);
+                // let that = this;
+                setTimeout(() => {
+                    that.renderer.removeClass(div1, 'box2');
+                    that.renderer.addClass(div1, 'box1');
+                }, 100);
+                setTimeout(() => {
+                    that.renderer.removeChild(ref, div1);
+                    that.renderer.removeChild(ref, div2);
+                }, 1000);
+            }
         });
         // this.roomService.enterRoom('5d2add3684899d2b0c10f158')
         //   .subscribe((success) => {
@@ -285,8 +324,24 @@ let RoomsComponent = class RoomsComponent {
 };
 RoomsComponent.ctorParameters = () => [
     { type: _services_room_service__WEBPACK_IMPORTED_MODULE_2__["RoomService"] },
-    { type: ngx_socket_io__WEBPACK_IMPORTED_MODULE_3__["Socket"] }
+    { type: ngx_socket_io__WEBPACK_IMPORTED_MODULE_3__["Socket"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"] }
 ];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('laughVibe', { static: false })
+], RoomsComponent.prototype, "laughVibe", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('smileVibe', { static: false })
+], RoomsComponent.prototype, "smileVibe", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('wowVibe', { static: false })
+], RoomsComponent.prototype, "wowVibe", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('sadVibe', { static: false })
+], RoomsComponent.prototype, "sadVibe", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('angryVibe', { static: false })
+], RoomsComponent.prototype, "angryVibe", void 0);
 RoomsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-rooms',
