@@ -4,6 +4,7 @@
 }
 .images-col span img:active {
   transform: translateY(5px);
+  -webkit-transform: translateY(5px);
 }
 .images-col span span {
   clear: both;
