@@ -9,12 +9,12 @@
 
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 
-<style type="text/css">
-	html {
-	-webkit-text-size-adjust: none;
-	touch-action: manipulation;
-}
-</style>
+	<style type="text/css">
+		html {
+			-webkit-text-size-adjust: none;
+			touch-action: manipulation;
+		}
+	</style>
 </head>
 
 <body ontouchstart="">
@@ -39,6 +39,13 @@
 	});
 
 	$('body').bind('touchmove', function(event) { event.preventDefault() });
+
+	$('body').bind('touchend', function(e) {
+		e.preventDefault();
+  // Add your code here. 
+  $(this).click();
+  // This line still calls the standard click event, in case the user needs to interact with the element that is being clicked on, but still avoids zooming in cases of double clicking.
+})
 </script>
 </html>
 
